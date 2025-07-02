@@ -117,7 +117,50 @@ body {
 
 
 @media (max-width: 425px) {
+    :root {
+        --fs-small: 0.8rem;
+        --fs-medium: 1rem;
+        --fs-large: 1.2rem;
+    }
+    
+    .primary-nav {
+        --gap : 2rem ;
+        position: fixed;
+        inset:  0 0 0 20%;
+        flex-direction: column  ;
+        padding: min(10vh, 5rem) 2rem;
+        background-color: hsl(0, 0%, 0%, 0.5);
+        backdrop-filter: blur(3px);
+        z-index: 1000;
 
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .primary-nav[data-visible='true'] {
+        transform: translateX(0%);
+    }
+    .primary-nav a{
+        text-decoration: none;
+        color: white;
+        font-size: var(--fs-medium);
+    }
+    .menu-btn {
+        position: absolute;
+        display: block;
+        background-color: transparent;
+        background-image: url(assets/icons/bars-solid.svg);
+        background-repeat: no-repeat;
+        width: 1.4rem;
+        aspect-ratio: 1;
+        border: 0;
+        top: 1rem;
+        right: 2.5rem;
+        z-index: 9999;
+    }
+    .menu-btn[aria-expanded='true'] {
+        background-image: url(assets/icons/xmark-solid.svg);
+    }
 }
 @media (max-width: 768px) {
 
