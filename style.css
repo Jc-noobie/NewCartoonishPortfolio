@@ -124,7 +124,7 @@ body {
     }
     
     .primary-nav {
-        --gap : 2rem ;
+        --gap : 2.5rem ;
         position: fixed;
         inset:  0 0 0 20%;
         flex-direction: column  ;
@@ -140,11 +140,7 @@ body {
     .primary-nav[data-visible='true'] {
         transform: translateX(0%);
     }
-    .primary-nav a{
-        text-decoration: none;
-        color: white;
-        font-size: var(--fs-medium);
-    }
+
     .menu-btn {
         position: absolute;
         display: block;
@@ -155,7 +151,7 @@ body {
         aspect-ratio: 1;
         border: 0;
         top: 1rem;
-        right: 2.5rem;
+        right: 3.5rem;
         z-index: 9999;
     }
     .menu-btn[aria-expanded='true'] {
